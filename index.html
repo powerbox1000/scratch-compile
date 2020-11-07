@@ -96,7 +96,7 @@
           <p><label><input type="checkbox" id="no-limits"> Remove limits such as clone and list length limits?</label></p>
         </fieldset>
       </fieldset>
-      <p>
+      <p id="compileSection" name="compileSection">
         <button id="load-no-minify">Compile!</button>
         <label><input type="checkbox" id="autodownload">Download automatically?</label>
       </p>
@@ -316,7 +316,7 @@ function load() {
 loadNoMinifyBtn.addEventListener('click', load);
 otherHtmlifyBtn.addEventListener('click', function(){
   var el = document.createElement('a');
-  el.setAttribute('href','#load-no-minify');
+  el.setAttribute('href','#compileSection');
   el.click();
   load();
 });
