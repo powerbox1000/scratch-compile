@@ -314,7 +314,12 @@ function load() {
     });
 }
 loadNoMinifyBtn.addEventListener('click', load);
-otherHtmlifyBtn.addEventListener('click', load);
+otherHtmlifyBtn.addEventListener('click', function(){
+  var el = document.createElement('a');
+  el.setAttribute('href','#log');
+  el.click();
+  load();
+});
 let defaultTitle = true;
 title.addEventListener('change', e => {
   defaultTitle = false;
